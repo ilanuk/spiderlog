@@ -71,3 +71,37 @@ Access to Spider resources
                     }
                 ]
             }
+            
+            
+### Create a New Spider log entry [POST]
+
+You may create your own spider sighting log entry using this action. It takes a JSON
+object containing a spider sighting entry.
+
++ Request (application/json)
+
+        {
+            "sightedAt": "2018-04-21T07:09",
+            "imageUrl":"uid-19147681/201801/14567771209_046ee56ef_z.jpg",
+            "description": "Spider I saw on the chair",
+            "tags": [
+                "scary"
+            ]
+        }
+ 
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /spiders/1
+            
+    + Body
+
+            {
+                "sightedAt": "2018-04-21T07:09",
+                "imageUrl":"uid-19147681/201801/14567771209_046ee56ef_z.jpg",
+                "description": "Spider I saw on the chair",
+                "tags": [
+                    "scary"
+                ]
+            }
